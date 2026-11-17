@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- This line makes the site fit phone screens properly -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal portfolio of Tabitha Muthoni, Information Technology student at Kirinyaga University.">
+  <title>Tabitha Muthoni | IT Student Portfolio</title>
+
+  <!-- Connects the CSS file (all the styling) -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ==================== 1. NAVIGATION BAR ==================== -->
+  <header class="navbar" id="navbar">
+    <a href="#home" class="logo">Tabitha<span>.</span></a>
+
+    <!-- Menu button: only visible on small screens -->
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <!-- Each href matches the id of a section below -->
+    <nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ==================== 2. HOME SECTION ==================== -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <p class="hero-welcome">Welcome to my portfolio</p>
+        <h1>Hi, I'm <span class="gradient-text">Tabitha Muthoni</span></h1>
+        <!-- The typing effect in script.js changes this text -->
+        <p class="hero-role">I'm a <span id="typed-text" class="typed"></span></p>
+        <p class="hero-intro">
+          I'm a second-year Information Technology student at Kirinyaga University,
+          learning new computer skills and building my knowledge of IT one step at a time.
+        </p>
+        <div class="hero-buttons">
+          <a href="#about" class="btn btn-primary">About Me</a>
+          <a href="#contact" class="btn btn-outline">Contact Me</a>
+        </div>
+      </div>
+
+      <!-- Decorative circle with my initials -->
+      <div class="hero-visual" aria-hidden="true">
+        <div class="avatar">TM</div>
+      </div>
+    </section>
+
+    <!-- ==================== 3. ABOUT ME SECTION ==================== -->
+    <section id="about" class="section">
+      <h2 class="section-title">About Me</h2>
+      <p class="section-subtitle">A little about who I am and what I study</p>
+
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            I'm Tabitha Muthoni, a second-year Information Technology student at
+            Kirinyaga University. I'm curious about how technology works and I enjoy
+            learning new computer skills.
+          </p>
+          <p>
+            I'm still early in my IT journey, and I'm focused on building a solid
+            foundation and developing my knowledge of IT. I'm excited to keep learning
+            and growing.
+          </p>
+        </div>
+
+        <!-- Education card -->
+        <div class="card education-card reveal">
+          <h3>Education</h3>
+          <ul class="education-list">
+            <li><strong>Institution:</strong> Kirinyaga University</li>
+            <li><strong>Location:</strong> Kutus, Kirinyaga County</li>
+            <li><strong>Level:</strong> Second-year student</li>
+            <li><strong>Course:</strong> Bachelor of Science in Information Technology</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 4. SKILLS SECTION ==================== -->
+    <section id="skills" class="section section-alt">
+      <h2 class="section-title">Skills</h2>
+      <p class="section-subtitle">What I can do so far</p>
+
+      <div class="skills-grid">
+        <div class="card skill-card reveal">
+          <div class="skill-icon">&lt;/&gt;</div>
+          <h3>HTML</h3>
+          <p>Building the structure of simple web pages.</p>
+        </div>
+
+        <div class="card skill-card reveal">
+          <div class="skill-icon">PC</div>
+          <h3>Basic Computer Skills</h3>
+          <p>Comfortable using computers for everyday and study tasks.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== 5. PROJECTS SECTION ==================== -->
+    <section id="projects" class="section">
+      <h2 class="section-title">Projects</h2>
+      <p class="section-subtitle">Where I am right now</p>
+
+      <div class="card projects-card reveal">
+        <h3>Currently learning</h3>
+        <p>
+          I'm currently learning and developing my practical IT skills.
+          I don't have finished projects to show yet. When I do, they will
+          be added here and shared on my GitHub.
+        </p>
+        <a href="https://github.com/tabithamunuhe4-ship-it" target="_blank" rel="noopener" class="btn btn-primary">
+          Visit my GitHub
+        </a>
+      </div>
+    </section>
+
+    <!-- ==================== 6. CONTACT SECTION ==================== -->
+    <section id="contact" class="section section-alt">
+      <h2 class="section-title">Contact</h2>
+      <p class="section-subtitle">Get in touch with me</p>
+
+      <div class="contact-grid">
+
+        <!-- Contact details -->
+        <div class="card contact-info reveal">
+          <h3>My details</h3>
+          <ul>
+            <li>
+              <strong>Email:</strong><br>
+              <a href="mailto:tabithamunuhe4@gmail.com">tabithamunuhe4@gmail.com</a>
+            </li>
+            <li>
+              <strong>Phone:</strong><br>
+              0719****41
+            </li>
+            <li>
+              <strong>GitHub:</strong><br>
+              <a href="https://github.com/tabithamunuhe4-ship-it" target="_blank" rel="noopener">tabithamunuhe4-ship-it</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact form: JavaScript checks it before sending (novalidate turns off the browser's own pop-ups) -->
+        <form class="card contact-form reveal" id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="name">Your name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name">
+            <small class="error" id="nameError"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Your email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email">
+            <small class="error" id="emailError"></small>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Write your message"></textarea>
+            <small class="error" id="messageError"></small>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Send Message</button>
+          <p class="form-success" id="formSuccess"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== 7. FOOTER ==================== -->
+  <footer class="footer">
+    <p>&copy; <span id="year"></span> Tabitha Muthoni. All rights reserved.</p>
+    <p class="footer-links">
+      <a href="#home">Back to top</a>
+      <a href="https://github.com/tabithamunuhe4-ship-it" target="_blank" rel="noopener">GitHub</a>
+      <a href="mailto:tabithamunuhe4@gmail.com">Email</a>
+    </p>
+  </footer>
+
+  <!-- Connects the JavaScript file (loaded last so the page is ready) -->
+  <script src="script.js"></script>
+</body>
+</html>
